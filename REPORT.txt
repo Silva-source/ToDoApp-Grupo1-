@@ -1,0 +1,72 @@
+# Se hicieron los siguientes pasos para ToDoApp:
+- Se creó el repositorio "ToDoApp-Group1" en Github.
+- Hice tres ramas simulando un estudiante diferente (1,2,3).
+- Se implementaron funcionalidades y resolví posibles conflictos.
+# Comandos usados:
+- Gitclone <url>: se usó para clonar el repositorio en Github.
+- Git checkout -b estudiante(1,2,3): usado para crear nuevas ramas de desarrollo sin afectar la función general del programa.
+- Git merge estudiante (1,2,3): usado para combinar las diferentes ramas dentro del projecto.
+# Conflictos:
+- Conflicto en "task_model.py" entre is_completed y is_done.
+- Solución: se combinó métodos, manteniendo is_completed.
+# Contribuciones:
+- Estudiante1: añadió mark_is_complete.
+- Estudiante2: añadió delete_ask y actualizó README.
+- Estudiante3: resolvió conflictos.
+# Reflexiones:
+- Aprendí a coordinar ramas y resolver conflictos.
+- No tenía conocimientos sobre las subidas de archivos usando Git.
+---- Preguntas ----
+¿Cómo coordinaron el trabajo en equipo para evitar conflictos innecesarios?
+El equipo utilizó las siguientes estrategias:
+
+Creación de ramas separadas: Cada estudiante trabajó en su propia rama (estudiante1, estudiante2, estudiante3) para evitar conflictos directos en la rama principal
+División de funcionalidades: Cada estudiante se enfocó en diferentes aspectos:
+Estudiante1: Funcionalidad para marcar tareas como completadas
+Estudiante2: Funcionalidad para eliminar tareas y actualización del README
+Estudiante3: Resolución de conflictos y métodos adicionales
+Integración gradual: Se hicieron merges progresivos entre ramas antes de la integración final
+
+¿Qué aprendieron sobre la resolución de conflictos en Git?
+Del análisis del código en task_model.py, se evidencia que hubo conflictos entre diferentes enfoques para el estado de las tareas:
+Conflicto identificado: Inconsistencia entre is_completed e is_done
+Resolución aplicada: Se mantuvo is_completed como atributo principal pero se conservaron ambos métodos para compatibilidad
+Lección aprendida: Los conflictos surgen cuando diferentes desarrolladores modifican las mismas líneas o implementan funcionalidades similares de manera diferente
+
+¿Por qué es importante usar Pull Requests en proyectos colaborativos?
+Los Pull Requests son importantes porque:
+
+Revisión de código: Permiten que otros miembros del equipo revisen los cambios antes de integrarlos
+Prevención de errores: Los errores actuales en task_model.py probablemente se habrían detectado con una revisión adecuada
+Documentación: Proporcionan un registro de qué cambios se hicieron y por qué
+Discusión: Facilitan la comunicación sobre implementaciones específicas
+Control de calidad: Aseguran que el código cumple con estándares antes de integrarse
+¿Cómo podría mejorarse el flujo de trabajo con herramientas como CI/CD?
+Las mejoras incluirían:
+
+Integración Continua (CI):
+Ejecutar tests automatizados en cada commit
+Verificación de sintaxis y estilo de código
+Los errores actuales se habrían detectado automáticamente
+Despliegue Continuo (CD):
+Despliegue automático de versiones estables
+Rollback automático en caso de fallos
+Herramientas específicas:
+GitHub Actions para automatizar pruebas
+Linters para Python (pylint, flake8)
+Cobertura de tests con pytest
+5. Descripción del historial de commits (git log --oneline --graph --all):
+
+*   4c8a555 (HEAD -> group1) Resolver conflicto combinando métodos y atributos
+|\
+| * 87fdf5f (estudiante3) Añadir set_done y remove_task en TaskModel
+* |   757b8a3 Añadir funcionalidad para eliminar tareas y actualizar README
+|\ \
+| |/
+|/|
+| * 9239482 (estudiante2) Añadir funcionalidad para eliminar taras y actualizar README      
+* | ba0f901 (estudiante1) Añadir funcionalidad para marcar tareas como completadas
+|/
+* cb5fff0 Añadir funcionalidad para marcar tareas como completadas
+* b7edf38 (main) Inicializando ToDoApp
+* fb148a4 Initial commit
